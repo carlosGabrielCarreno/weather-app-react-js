@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 import styles from '../css/Cards.module.css';
 import Card from './Card';
 
@@ -9,7 +11,7 @@ export default function Cards(props) {
         {cities.map((c, i) => {
           return (
             <Card
-              key={c.id + i}
+              key={uuidv4()}
               max={c.max}
               min={c.min}
               name={c.name}
