@@ -1,3 +1,7 @@
+# Hi  ✋
+
+# This is the URL to view the app: <a href="https://weather-app-with-cra-react-js.netlify.app/">weather-app</a>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
