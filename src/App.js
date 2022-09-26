@@ -8,7 +8,7 @@ const App = () => {
   const [cities, setCities] = useState([]);
 
   const getCityByApi = async (cityName = '') => {
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.REACT_APP_API_KEY}&units=metric`;
+    const url = `${process.env.REACT_APP_URL}q=${cityName}&appid=${process.env.REACT_APP_API_KEY}&units=metric`;
 
     const { data } = await axios.get(url);
 
