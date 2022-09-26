@@ -10,31 +10,33 @@ const App = () => {
   const getCityByApi = async (cityName = '') => {
     const path = `${process.env.REACT_APP_URL}q=${cityName}&appid=${process.env.REACT_APP_API_KEY}&units=metric`;
     const url = new URL(path);
-    console.log(url);
-    const { data } = await axios.get(url);
-
-    const { main } = data;
-    if (main !== undefined) {
-      const city = {
-        min: Math.round(main.temp_min),
-        max: Math.round(main.temp_max),
-        img: data.weather[0].icon,
-        id: data.id,
-        wind: data.wind.speed,
-        temp: data.main.temp,
-        name: data.name,
-        weather: data.weather[0].main,
-        clouds: data.clouds.all,
-        latitud: data.coord.lat,
-        longitud: data.coord.lon,
-      };
+    try {
+      const { data } = await axios.get(url);
+      const { main } = data;
+      let city;
+      if (main !== undefined) {
+        city = {
+          min: Math.round(main.temp_min),
+          max: Math.round(main.temp_max),
+          img: data.weather[0].icon,
+          id: data.id,
+          wind: data.wind.speed,
+          temp: data.main.temp,
+          name: data.name,
+          weather: data.weather[0].main,
+          clouds: data.clouds.all,
+          latitud: data.coord.lat,
+          longitud: data.coord.lon,
+        };
+      }
       if (!isIncludesCity(cities, city.name)) {
         setCities((oldCities) => [...oldCities, city]);
       } else {
         alert('This city already exists!');
       }
-    } else {
+    } catch (error) {
       alert('City no found');
+      console.log(error);
     }
   };
 
