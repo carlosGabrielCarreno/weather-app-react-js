@@ -1,12 +1,27 @@
 body {
-  margin: 0;
+  color: #e9d5ca;
+  margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100vh;
+  background: url(./assets/bkg-climate.jpg), url(./assets/bkg-climate.jpg),
+    linear-gradient(#151322, #827397);
+  /*  opacity: 0.5; */
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  /*  background: linear-gradient(157deg, rgba(76,172,188,0.32816876750700286) 0%, rgba(0,0,0,0.5130427170868348) 100%); */
 }
-
+@media (max-width: 375px) {
+  body {
+    background-attachment: fixed;
+  }
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

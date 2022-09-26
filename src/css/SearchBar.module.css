@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 0.1px solid #88878a;
+  padding: 0.2rem 0 0.2rem 1rem;
+  color: #e9d5ca;
+  margin-right: 1rem;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #e9d5ca;
+  font-weight: 300;
+}
+
+.button {
+  background: linear-gradient(#827397, #363062);
+  border: transparent;
+  padding: 0.2rem 1rem;
+  color: #e9d5ca;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+@media (min-width: 375px) {
+}
