@@ -8,8 +8,9 @@ const App = () => {
   const [cities, setCities] = useState([]);
 
   const getCityByApi = async (cityName = '') => {
-    const url = `${process.env.REACT_APP_URL}q=${cityName}&appid=${process.env.REACT_APP_API_KEY}&units=metric`;
-
+    const path = `${process.env.REACT_APP_URL}q=${cityName}&appid=${process.env.REACT_APP_API_KEY}&units=metric`;
+    const url = new URL(path);
+    console.log(url);
     const { data } = await axios.get(url);
 
     const { main } = data;
