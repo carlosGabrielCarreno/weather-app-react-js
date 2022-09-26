@@ -1,6 +1,6 @@
 # Hi  ✋
 
-# This is the URL to view the app: <a href="https://weather-app-with-cra-react-js.netlify.app/" target="_blank" >weather-app</a>
+# This is the URL to view the app: <a href="https://weather-app-with-cra-react-js.netlify.app/" target="_blank" rel="noopener noreferrer" >weather-app</a>
 
 # Getting Started with Create React App
 
