@@ -1,0 +1,29 @@
+.container h2 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container button {
+  cursor: pointer;
+  margin: 1rem;
+  background: linear-gradient(#827397, #363062);
+  border: transparent;
+  padding: 0.2rem 1rem;
+  color: #e9d5ca;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background: linear-gradient(
+    hsla(265, 15%, 52%, 0.772),
+    rgba(54, 48, 98, 0.8)
+  );
+  color: #a69b94;
+}

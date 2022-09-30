@@ -28,7 +28,7 @@ export default function Card(props) {
         </div>
         <img
           src={`http://openweathermap.org/img/wn/${img}@2x.png`}
-          alt="clima"
+          alt={name}
         />
       </div>
     </div>

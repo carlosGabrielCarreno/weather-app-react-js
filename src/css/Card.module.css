@@ -25,6 +25,14 @@
   cursor: pointer;
 }
 
+.button:hover {
+  background: linear-gradient(
+    hsla(265, 15%, 52%, 0.772),
+    rgba(54, 48, 98, 0.8)
+  );
+  color: #a69b94;
+}
+
 .titlecard {
   font-weight: 400;
   font-size: 2rem;

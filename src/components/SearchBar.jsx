@@ -2,28 +2,28 @@ import { useState } from 'react';
 import styles from '../css/SearchBar.module.css';
 
 export default function SearchBar({ onSearch }) {
-  const [city, setCity] = useState('');
+  const [placeName, setPlaceName] = useState('');
 
-  const changeCity = (e) => {
-    setCity(e.target.value);
+  const onChangeCity = (event) => {
+    setPlaceName(event.target.value);
   };
 
   return (
     <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        onSearch(city);
-        setCity('');
+      onSubmit={(event) => {
+        event.preventDefault();
+        onSearch(placeName);
+        setPlaceName('');
       }}
       className={styles.container}
     >
       <input
-        onChange={changeCity}
-        value={city}
+        onChange={onChangeCity}
+        value={placeName}
         className={styles.input}
         id="input"
         type="text"
-        placeholder="City..."
+        placeholder="Write the city..."
       />
       <button className={styles.button}>Search</button>
     </form>

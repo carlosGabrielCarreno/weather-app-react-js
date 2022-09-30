@@ -8,16 +8,16 @@ export default function Cards(props) {
   if (cities) {
     return (
       <div className={styles.container}>
-        {cities.map((c, i) => {
+        {cities.map((city) => {
           return (
             <Card
               key={uuidv4()}
-              max={c.max}
-              min={c.min}
-              name={c.name}
-              img={c.img}
-              onClose={() => onClose(c.id)}
-              id={c.id}
+              max={city.max}
+              min={city.min}
+              name={city.name}
+              img={city.img}
+              onClose={() => onClose(city.id)}
+              id={city.id}
             />
           );
         })}

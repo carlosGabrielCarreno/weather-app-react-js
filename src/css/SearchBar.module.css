@@ -26,5 +26,10 @@
   cursor: pointer;
 }
 
-@media (min-width: 375px) {
+.button:hover {
+  background: linear-gradient(
+    hsla(265, 15%, 52%, 0.772),
+    rgba(54, 48, 98, 0.8)
+  );
+  color: #a69b94;
 }
