@@ -7,18 +7,18 @@ export const useFetch = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
-    console.log('useEffect');
     if (placeName.length > 0) {
       getCityByApi(placeName, cities).then((response) => {
         if (typeof response === 'string') {
           setErrorMessage(response);
         } else if (typeof response === 'object') {
           setCities((oldCities) => [...oldCities, response]);
+          setPlacename('');
           setErrorMessage('');
         }
       });
     }
-  }, [placeName]);
+  }, [placeName, cities]);
 
   const onClose = (id) => {
     setCities(cities.filter((city) => city.id !== id));
