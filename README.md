@@ -1,7 +1,8 @@
 ## 🌦️ Weather App
-#
-![Design preview for the Advice generator app coding challenge](./design/desktop-preview.jpg)
 
+#
+
+![Design preview](./src/assets/weather-app-screen.png)
 
 ### This weather app was a challenge I did in [SoyHenry](https://www.soyhenry.com/) Bootcamp, I loved making it as it helped me gain basic and fundamental skills with React JS, responsive design and CSS modules.
 
