@@ -1,7 +1,8 @@
 import { buildCity } from './buildCity';
 import { isIncludesCity } from './isIncludesCity';
 
-const { REACT_APP_API_KEY, REACT_APP_URL } = process.env;
+const { REACT_APP_API_KEY } = process.env;
+const REACT_APP_URL = 'https://api.openweathermap.org/data/2.5/weather?q=';
 
 export const getCityByApi = async (placeName = '', cities) => {
   const urlForApi = `${REACT_APP_URL}${placeName}&appid=${REACT_APP_API_KEY}&units=metric`;
