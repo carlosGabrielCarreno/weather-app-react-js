@@ -1,25 +1,25 @@
-import styles from '../css/Card.module.css';
+import style from '../css/Card.module.css';
 
-export default function Card(props) {
+const Card = (props) => {
   const { max, min, name, img, onClose } = props;
 
   return (
-    <div className={styles.divContainer}>
-      <div className={styles.divContainerButton}>
-        <button className={styles.button} onClick={onClose}>
+    <div className={style.card}>
+      <div className={style.cardContainerHeaderCard}>
+        <button className={style.cardButton} onClick={onClose}>
           X
         </button>
-        <h2 className={styles.titlecard}>{name}</h2>
+        <h2 className={style.titlecard}>{name}</h2>
       </div>
-      <div className={styles.containerTemp}>
-        <div className={styles.containerTemperatures}>
-          <p className={styles.containerTemperature}>
+      <div className={style.containerTemp}>
+        <div className={style.containerTemperatures}>
+          <p className={style.containerTemperature}>
             min{' '}
             <span>
               {min} <strong>C°</strong>{' '}
             </span>
           </p>
-          <p className={styles.containerTemperature}>
+          <p className={style.containerTemperature}>
             max{' '}
             <span>
               {max} <strong>C°</strong>
@@ -33,4 +33,6 @@ export default function Card(props) {
       </div>
     </div>
   );
-}
+};
+
+export default Card;

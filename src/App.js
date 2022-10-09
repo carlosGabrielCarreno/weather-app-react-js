@@ -4,12 +4,12 @@ import Nav from './components/Nav';
 import { useFetch } from './hooks/useFetch';
 
 const App = () => {
-  const { cities, errorMessage, onClose, onErrorMessage, setPlacename } =
+  const { cities, errorMessage, onClose, onErrorMessage, setPlaceName } =
     useFetch();
 
   return (
-    <div className="app_container">
-      <Nav onSearch={setPlacename} />
+    <>
+      <Nav onSearch={setPlaceName} />
       {errorMessage.length === 0 ? (
         <Cards cities={cities} onClose={onClose} />
       ) : (
@@ -20,7 +20,7 @@ const App = () => {
           />
         </>
       )}
-    </div>
+    </>
   );
 };
 

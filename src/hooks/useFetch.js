@@ -3,36 +3,40 @@ import { getCityByApi } from '../helpers/getCityByApi';
 
 export const useFetch = () => {
   const [cities, setCities] = useState([]);
-  const [placeName, setPlacename] = useState('');
+  const [placeName, setPlaceName] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+
+  const setStates = async () => {
+    const data = await getCityByApi(placeName, cities);
+    if (typeof data === 'string') {
+      setErrorMessage(data);
+    } else if (typeof data === 'object') {
+      setCities((oldCities) => [...oldCities, data]);
+      setPlaceName('');
+      setErrorMessage('');
+    }
+  };
 
   useEffect(() => {
     if (placeName.length > 0) {
-      getCityByApi(placeName, cities).then((response) => {
-        if (typeof response === 'string') {
-          setErrorMessage(response);
-        } else if (typeof response === 'object') {
-          setCities((oldCities) => [...oldCities, response]);
-          setPlacename('');
-          setErrorMessage('');
-        }
-      });
+      setStates();
     }
   }, [placeName, cities]);
 
   const onClose = (id) => {
-    setCities(cities.filter((city) => city.id !== id));
+    const filteredCities = cities.filter((city) => city.id !== id);
+    setCities(filteredCities);
   };
 
   const onErrorMessage = () => {
     setErrorMessage('');
-    setPlacename('');
+    setPlaceName('');
   };
 
   return {
     cities,
     errorMessage,
-    setPlacename,
+    setPlaceName,
     onClose,
     onErrorMessage,
   };
