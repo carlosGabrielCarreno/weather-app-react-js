@@ -8,8 +8,6 @@
 
 ### Technologies used in the project: _React JS_, _CSS Modules_,_Git_ and _Netlify_ for deployment.
 
-#
-
 ## Author:
 
 **Gabriel Carreño**
