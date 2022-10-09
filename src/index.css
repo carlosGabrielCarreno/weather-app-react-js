@@ -5,8 +5,8 @@
 }
 
 body {
-  background: /* url(./assets/bkg-climate.jpg),  */ url(./assets/bkg-climate.jpg),
-    linear-gradient(to right, rgb(67, 59, 78), rgba(21, 19, 34));
+  background: url(./assets/bkg-climate.jpg), url(./assets/bkg-climate.jpg),
+    linear-gradient(to right, rgba(130, 115, 151), rgba(21, 19, 34));
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
@@ -15,8 +15,7 @@ body {
   font-family: 'Nunito Sans', sans-serif;
   height: 100vh;
   margin: 0 auto;
-  margin-bottom: 1rem;
-  width: 100vw;
   -webkit-font-smoothing: antialiased;
+  width: 100vw;
   -moz-osx-font-smoothing: grayscale;
 }
